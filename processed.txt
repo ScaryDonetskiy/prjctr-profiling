@@ -1,0 +1,344 @@
+Statistical profiling result from isolate-0x130008000-14614-v8.log, (109 ticks, 2 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+      6    5.5%          /usr/lib/system/libsystem_pthread.dylib
+      2    1.8%          /usr/lib/system/libsystem_c.dylib
+      2    1.8%          /usr/lib/libc++.1.dylib
+      1    0.9%          /usr/lib/system/libsystem_malloc.dylib
+      1    0.9%          /usr/lib/libobjc.A.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      5    4.6%    5.2%  JS: *#insert /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:64:12
+      5    4.6%    5.2%  JS: *#delete /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:119:12
+      2    1.8%    2.1%  JS: *measureComplexity /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:212:27
+      1    0.9%    1.0%  JS: ^generateRandomData /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:204:28
+      1    0.9%    1.0%  JS: *find /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:189:9
+
+ [C++]:
+   ticks  total  nonlib   name
+     42   38.5%   43.3%  t std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats> > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+     21   19.3%   21.6%  T node::builtins::BuiltinLoader::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+      6    5.5%    6.2%  T _proc_set_dirty
+      5    4.6%    5.2%  T _kdebug_trace
+      3    2.8%    3.1%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      1    0.9%    1.0%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      1    0.9%    1.0%  t std::__1::__hash_table<unsigned long long, std::__1::hash<unsigned long long>, std::__1::equal_to<unsigned long long>, std::__1::allocator<unsigned long long> >::__rehash(unsigned long)
+      1    0.9%    1.0%  T _task_restartable_ranges_synchronize
+      1    0.9%    1.0%  T _mach_vm_allocate
+
+ [Summary]:
+   ticks  total  nonlib   name
+     14   12.8%   14.4%  JavaScript
+     81   74.3%   83.5%  C++
+      3    2.8%    3.1%  GC
+     12   11.0%          Shared libraries
+      2    1.8%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     26   43.3%   23.9%  t std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats> > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+     21   35.0%   19.3%  T node::builtins::BuiltinLoader::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    6.7%    3.7%  T _proc_set_dirty
+      4    6.7%    3.7%  T _kdebug_trace
+      3    5.0%    2.8%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      1    1.7%    0.9%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      1    1.7%    0.9%  t std::__1::__hash_table<unsigned long long, std::__1::hash<unsigned long long>, std::__1::equal_to<unsigned long long>, std::__1::allocator<unsigned long long> >::__rehash(unsigned long)
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+     42   38.5%  t std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats> > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+      3    7.1%    JS: ~<anonymous> /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:244:19
+      3  100.0%      t std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats> > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+      3  100.0%        JS: ~<anonymous> /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:1:1
+      3  100.0%          JS: ~Module._compile node:internal/modules/cjs/loader:1229:37
+      3  100.0%            JS: ~Module._extensions..js node:internal/modules/cjs/loader:1284:37
+      2    4.8%    JS: ~WriteStream node:tty:84:21
+      2  100.0%      JS: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:47:35
+      2  100.0%        JS: ~getStdout node:internal/bootstrap/switches/is_main_thread:148:19
+      2  100.0%          JS: ~get node:internal/console/constructor:208:14
+      2  100.0%            JS: ~value node:internal/console/constructor:336:20
+      2    4.8%    JS: ^#insert /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:64:12
+      2  100.0%      JS: ^#insert /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:64:12
+      1   50.0%        JS: ^insert /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:59:11
+      1  100.0%          JS: ^measureComplexity /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:212:27
+      1  100.0%            JS: ~<anonymous> /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:1:1
+      1   50.0%        JS: ^#insert /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:64:12
+      1  100.0%          JS: ^#insert /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:64:12
+      1  100.0%            JS: ^#insert /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:64:12
+      1    2.4%    t std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats> > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+      1  100.0%      JS: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.4%    JS: ~value node:internal/console/constructor:200:20
+      1  100.0%      JS: ~initializeGlobalConsole node:internal/console/constructor:687:33
+      1  100.0%        JS: ~patchProcessObject node:internal/process/pre_execution:131:28
+      1  100.0%          JS: ~prepareExecution node:internal/process/pre_execution:55:26
+      1  100.0%            JS: ~prepareMainThreadExecution node:internal/process/pre_execution:39:36
+      1    2.4%    JS: ~toRealPath node:internal/modules/cjs/loader:488:20
+      1  100.0%      JS: ~Module._findPath node:internal/modules/cjs/loader:596:28
+      1  100.0%        JS: ~resolveMainPath node:internal/modules/run_main:10:25
+      1  100.0%          JS: ~executeUserEntryPoint node:internal/modules/run_main:75:31
+      1  100.0%            JS: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.4%    JS: ~setHasTickScheduled node:internal/process/task_queues:51:29
+      1  100.0%      JS: ~nextTick node:internal/process/task_queues:103:18
+      1  100.0%        JS: ~onwrite node:internal/streams/writable:428:17
+      1  100.0%          JS: ~afterWriteDispatched node:internal/stream_base_commons:155:30
+      1  100.0%            JS: ~writeGeneric node:internal/stream_base_commons:147:22
+      1    2.4%    JS: ~readPackage node:internal/modules/cjs/loader:374:21
+      1  100.0%      JS: ~readPackageScope node:internal/modules/cjs/loader:416:26
+      1  100.0%        JS: ~shouldUseESMLoader node:internal/modules/run_main:26:28
+      1  100.0%          JS: ~executeUserEntryPoint node:internal/modules/run_main:75:31
+      1  100.0%            JS: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.4%    JS: ~patchProcessObject node:internal/process/pre_execution:131:28
+      1  100.0%      JS: ~prepareExecution node:internal/process/pre_execution:55:26
+      1  100.0%        JS: ~prepareMainThreadExecution node:internal/process/pre_execution:39:36
+      1  100.0%          JS: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.4%    JS: ~normalizeString node:path:66:25
+      1  100.0%      JS: ~resolve node:path:1095:10
+      1  100.0%        JS: ~patchProcessObject node:internal/process/pre_execution:131:28
+      1  100.0%          JS: ~prepareExecution node:internal/process/pre_execution:55:26
+      1  100.0%            JS: ~prepareMainThreadExecution node:internal/process/pre_execution:39:36
+      1    2.4%    JS: ~newAsyncId node:internal/async_hooks:417:20
+      1  100.0%      JS: ~nextTick node:internal/process/task_queues:103:18
+      1  100.0%        JS: ~onwrite node:internal/streams/writable:428:17
+      1  100.0%          JS: ~afterWriteDispatched node:internal/stream_base_commons:155:30
+      1  100.0%            JS: ~writeGeneric node:internal/stream_base_commons:147:22
+      1    2.4%    JS: ~internalCompileFunction node:internal/vm:31:33
+      1  100.0%      JS: ~wrapSafe node:internal/modules/cjs/loader:1168:18
+      1  100.0%        JS: ~Module._compile node:internal/modules/cjs/loader:1229:37
+      1  100.0%          JS: ~Module._extensions..js node:internal/modules/cjs/loader:1284:37
+      1  100.0%            JS: ~Module.load node:internal/modules/cjs/loader:1121:33
+      1    2.4%    JS: ~findMin /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:107:12
+      1  100.0%      JS: ~#delete /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:119:12
+      1  100.0%        JS: ~#delete /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:119:12
+      1  100.0%          JS: ~#delete /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:119:12
+      1  100.0%            JS: ~#delete /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:119:12
+      1    2.4%    JS: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:47:35
+      1  100.0%      JS: ~getStdout node:internal/bootstrap/switches/is_main_thread:148:19
+      1  100.0%        JS: ~get node:internal/console/constructor:208:14
+      1  100.0%          JS: ~value node:internal/console/constructor:336:20
+      1  100.0%            JS: ~log node:internal/console/constructor:375:6
+      1    2.4%    JS: ~<anonymous> node:internal/perf/performance_entry:1:1
+      1  100.0%      JS: ^compileForInternalLoader node:internal/bootstrap/loaders:318:27
+      1  100.0%        JS: ^requireBuiltin node:internal/bootstrap/loaders:355:24
+      1  100.0%          JS: ~<anonymous> node:perf_hooks:1:1
+      1  100.0%            JS: ^compileForInternalLoader node:internal/bootstrap/loaders:318:27
+      1    2.4%    JS: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.4%    JS: ~<anonymous> node:internal/abort_controller:1:1
+      1  100.0%      JS: ^compileForInternalLoader node:internal/bootstrap/loaders:318:27
+      1  100.0%        JS: ^requireBuiltin node:internal/bootstrap/loaders:355:24
+      1  100.0%          JS: ~<anonymous> node:internal/streams/operators:1:1
+      1  100.0%            JS: ^compileForInternalLoader node:internal/bootstrap/loaders:318:27
+      1    2.4%    JS: ^initializeCJS node:internal/modules/cjs/loader:313:23
+      1  100.0%      JS: ~initializeCJSLoader node:internal/process/pre_execution:558:29
+      1  100.0%        JS: ~setupUserModules node:internal/process/pre_execution:117:26
+      1  100.0%          JS: ~prepareExecution node:internal/process/pre_execution:55:26
+      1  100.0%            JS: ~prepareMainThreadExecution node:internal/process/pre_execution:39:36
+      1    2.4%    JS: ^compileForInternalLoader node:internal/bootstrap/loaders:318:27
+      1  100.0%      JS: ^requireBuiltin node:internal/bootstrap/loaders:355:24
+      1  100.0%        JS: ~<anonymous> node:tty:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/loaders:318:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/loaders:355:24
+
+     21   19.3%  T node::builtins::BuiltinLoader::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     21  100.0%    JS: ^compileForInternalLoader node:internal/bootstrap/loaders:318:27
+     21  100.0%      JS: ^requireBuiltin node:internal/bootstrap/loaders:355:24
+      3   14.3%        JS: ~<anonymous> node:tty:1:1
+      3  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/loaders:318:27
+      3  100.0%            JS: ^requireBuiltin node:internal/bootstrap/loaders:355:24
+      3   14.3%        JS: ~<anonymous> node:internal/streams/duplex:1:1
+      3  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/loaders:318:27
+      3  100.0%            JS: ^requireBuiltin node:internal/bootstrap/loaders:355:24
+      2    9.5%        JS: ~<anonymous> node:stream:1:1
+      2  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/loaders:318:27
+      2  100.0%            JS: ^requireBuiltin node:internal/bootstrap/loaders:355:24
+      2    9.5%        JS: ~<anonymous> node:internal/process/esm_loader:1:1
+      2  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/loaders:318:27
+      2  100.0%            JS: ^requireBuiltin node:internal/bootstrap/loaders:355:24
+      1    4.8%        JS: ~getTranslators node:internal/modules/esm/loader:55:24
+      1  100.0%          JS: ~<instance_members_initializer> node:internal/modules/esm/loader:182:1
+      1  100.0%            JS: ~ESMLoader node:internal/modules/esm/loader:238:14
+      1    4.8%        JS: ~<anonymous> node:internal/structured_clone:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/loaders:318:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/loaders:355:24
+      1    4.8%        JS: ~<anonymous> node:internal/streams/readable:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/loaders:318:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/loaders:355:24
+      1    4.8%        JS: ~<anonymous> node:internal/streams/operators:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/loaders:318:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/loaders:355:24
+      1    4.8%        JS: ~<anonymous> node:internal/streams/compose:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/loaders:318:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/loaders:355:24
+      1    4.8%        JS: ~<anonymous> node:internal/perf/usertiming:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/loaders:318:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/loaders:355:24
+      1    4.8%        JS: ~<anonymous> node:internal/perf/timerify:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/loaders:318:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/loaders:355:24
+      1    4.8%        JS: ~<anonymous> node:internal/perf/resource_timing:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/loaders:318:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/loaders:355:24
+      1    4.8%        JS: ~<anonymous> node:internal/perf/performance:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/loaders:318:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/loaders:355:24
+      1    4.8%        JS: ~<anonymous> node:internal/modules/esm/resolve:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/loaders:318:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/loaders:355:24
+      1    4.8%        JS: ~<anonymous> node:internal/modules/esm/loader:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/loaders:318:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/loaders:355:24
+
+      6    5.5%  T _proc_set_dirty
+      1   16.7%    JS: ~prepareExecution node:internal/process/pre_execution:55:26
+      1  100.0%      JS: ~prepareMainThreadExecution node:internal/process/pre_execution:39:36
+      1  100.0%        JS: ~<anonymous> node:internal/main/run_main_module:1:1
+      1   16.7%    JS: ~get node:internal/console/constructor:208:14
+      1  100.0%      JS: ~value node:internal/console/constructor:336:20
+      1  100.0%        JS: ~log node:internal/console/constructor:375:6
+      1  100.0%          t std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats> > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+      1  100.0%            JS: ~<anonymous> /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:1:1
+      1   16.7%    JS: ~allocUnsafe node:buffer:376:42
+      1  100.0%      JS: ~tryCreateBuffer node:fs:414:25
+      1  100.0%        JS: ~readFileSync node:fs:450:22
+      1  100.0%          JS: ~Module._extensions..js node:internal/modules/cjs/loader:1284:37
+      1  100.0%            JS: ~Module.load node:internal/modules/cjs/loader:1121:33
+      1   16.7%    JS: ~Module._load node:internal/modules/cjs/loader:900:24
+      1  100.0%      JS: ~executeUserEntryPoint node:internal/modules/run_main:75:31
+      1  100.0%        JS: ~<anonymous> node:internal/main/run_main_module:1:1
+
+      6    5.5%  /usr/lib/system/libsystem_pthread.dylib
+      1   16.7%    JS: ~toRealPath node:internal/modules/cjs/loader:488:20
+      1  100.0%      JS: ~Module._findPath node:internal/modules/cjs/loader:596:28
+      1  100.0%        JS: ~resolveMainPath node:internal/modules/run_main:10:25
+      1  100.0%          JS: ~executeUserEntryPoint node:internal/modules/run_main:75:31
+      1  100.0%            JS: ~<anonymous> node:internal/main/run_main_module:1:1
+      1   16.7%    JS: ~processTicksAndRejections node:internal/process/task_queues:67:35
+      1   16.7%    JS: ~patchProcessObject node:internal/process/pre_execution:131:28
+      1  100.0%      JS: ~prepareExecution node:internal/process/pre_execution:55:26
+      1  100.0%        JS: ~prepareMainThreadExecution node:internal/process/pre_execution:39:36
+      1  100.0%          JS: ~<anonymous> node:internal/main/run_main_module:1:1
+      1   16.7%    JS: ~initializeCJS node:internal/modules/cjs/loader:313:23
+      1  100.0%      JS: ~initializeCJSLoader node:internal/process/pre_execution:558:29
+      1  100.0%        JS: ~setupUserModules node:internal/process/pre_execution:117:26
+      1  100.0%          JS: ~prepareExecution node:internal/process/pre_execution:55:26
+      1  100.0%            JS: ~prepareMainThreadExecution node:internal/process/pre_execution:39:36
+      1   16.7%    JS: ~generateRandomData /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:204:28
+      1  100.0%      JS: ~<anonymous> /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:244:19
+      1  100.0%        t std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats> > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+      1  100.0%          JS: ~<anonymous> /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:1:1
+      1  100.0%            JS: ~Module._compile node:internal/modules/cjs/loader:1229:37
+
+      5    4.6%  T _kdebug_trace
+      1   20.0%    JS: ~realpathSync node:fs:2492:22
+      1  100.0%      JS: ~toRealPath node:internal/modules/cjs/loader:488:20
+      1  100.0%        JS: ~Module._findPath node:internal/modules/cjs/loader:596:28
+      1  100.0%          JS: ~resolveMainPath node:internal/modules/run_main:10:25
+      1  100.0%            JS: ~executeUserEntryPoint node:internal/modules/run_main:75:31
+      1   20.0%    JS: ~patchProcessObject node:internal/process/pre_execution:131:28
+      1  100.0%      JS: ~prepareExecution node:internal/process/pre_execution:55:26
+      1  100.0%        JS: ~prepareMainThreadExecution node:internal/process/pre_execution:39:36
+      1  100.0%          JS: ~<anonymous> node:internal/main/run_main_module:1:1
+      1   20.0%    JS: ~initializeCJSLoader node:internal/process/pre_execution:558:29
+      1  100.0%      JS: ~setupUserModules node:internal/process/pre_execution:117:26
+      1  100.0%        JS: ~prepareExecution node:internal/process/pre_execution:55:26
+      1  100.0%          JS: ~prepareMainThreadExecution node:internal/process/pre_execution:39:36
+      1  100.0%            JS: ~<anonymous> node:internal/main/run_main_module:1:1
+      1   20.0%    JS: ~<anonymous> node:internal/main/run_main_module:1:1
+
+      5    4.6%  JS: *#insert /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:64:12
+      3   60.0%    JS: *#insert /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:64:12
+      3  100.0%      JS: *#insert /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:64:12
+      3  100.0%        JS: *#insert /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:64:12
+      2   66.7%          JS: *#insert /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:64:12
+      1   50.0%            JS: *measureComplexity /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:212:27
+      1   50.0%            JS: *#insert /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:64:12
+      1   33.3%          JS: *insert /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:59:11
+      1  100.0%            JS: ^measureComplexity /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:212:27
+      1   20.0%    JS: *measureComplexity /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:212:27
+      1  100.0%      JS: ~<anonymous> /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:1:1
+      1  100.0%        JS: ~Module._compile node:internal/modules/cjs/loader:1229:37
+      1  100.0%          JS: ~Module._extensions..js node:internal/modules/cjs/loader:1284:37
+      1  100.0%            JS: ~Module.load node:internal/modules/cjs/loader:1121:33
+      1   20.0%    JS: *insert /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:59:11
+      1  100.0%      JS: ^measureComplexity /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:212:27
+      1  100.0%        JS: ~<anonymous> /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:1:1
+      1  100.0%          JS: ~Module._compile node:internal/modules/cjs/loader:1229:37
+      1  100.0%            JS: ~Module._extensions..js node:internal/modules/cjs/loader:1284:37
+
+      5    4.6%  JS: *#delete /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:119:12
+      4   80.0%    JS: *#delete /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:119:12
+      4  100.0%      JS: *#delete /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:119:12
+      3   75.0%        JS: *#delete /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:119:12
+      3  100.0%          JS: *#delete /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:119:12
+      3  100.0%            JS: *#delete /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:119:12
+      1   25.0%        JS: *measureComplexity /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:212:27
+      1  100.0%          JS: ~<anonymous> /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:1:1
+      1  100.0%            JS: ~Module._compile node:internal/modules/cjs/loader:1229:37
+      1   20.0%    JS: *delete /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:114:11
+      1  100.0%      JS: ^measureComplexity /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:212:27
+      1  100.0%        JS: ~<anonymous> /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:1:1
+      1  100.0%          JS: ~Module._compile node:internal/modules/cjs/loader:1229:37
+      1  100.0%            JS: ~Module._extensions..js node:internal/modules/cjs/loader:1284:37
+
+      3    2.8%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      1   33.3%    JS: ~value node:internal/console/constructor:336:20
+      1  100.0%      JS: ~log node:internal/console/constructor:375:6
+      1  100.0%        t std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats> > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+      1  100.0%          JS: ~<anonymous> /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:1:1
+      1  100.0%            JS: ~Module._compile node:internal/modules/cjs/loader:1229:37
+      1   33.3%    JS: ~realpathSync node:fs:2492:22
+      1  100.0%      JS: ~toRealPath node:internal/modules/cjs/loader:488:20
+      1  100.0%        JS: ~Module._findPath node:internal/modules/cjs/loader:596:28
+      1  100.0%          JS: ~resolveMainPath node:internal/modules/run_main:10:25
+      1  100.0%            JS: ~executeUserEntryPoint node:internal/modules/run_main:75:31
+      1   33.3%    JS: ~prepareExecution node:internal/process/pre_execution:55:26
+      1  100.0%      JS: ~prepareMainThreadExecution node:internal/process/pre_execution:39:36
+      1  100.0%        JS: ~<anonymous> node:internal/main/run_main_module:1:1
+
+      2    1.8%  UNKNOWN
+      1   50.0%    JS: ~toRealPath node:internal/modules/cjs/loader:488:20
+      1  100.0%      JS: ~Module._findPath node:internal/modules/cjs/loader:596:28
+      1  100.0%        JS: ~resolveMainPath node:internal/modules/run_main:10:25
+      1  100.0%          JS: ~executeUserEntryPoint node:internal/modules/run_main:75:31
+      1  100.0%            JS: ~<anonymous> node:internal/main/run_main_module:1:1
+      1   50.0%    JS: ~initializeSourceMapsHandlers node:internal/process/pre_execution:580:38
+      1  100.0%      JS: ~prepareExecution node:internal/process/pre_execution:55:26
+      1  100.0%        JS: ~prepareMainThreadExecution node:internal/process/pre_execution:39:36
+      1  100.0%          JS: ~<anonymous> node:internal/main/run_main_module:1:1
+
+      2    1.8%  JS: *measureComplexity /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:212:27
+      2  100.0%    JS: ~<anonymous> /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:1:1
+      2  100.0%      JS: ~Module._compile node:internal/modules/cjs/loader:1229:37
+      2  100.0%        JS: ~Module._extensions..js node:internal/modules/cjs/loader:1284:37
+      2  100.0%          JS: ~Module.load node:internal/modules/cjs/loader:1121:33
+      2  100.0%            JS: ~Module._load node:internal/modules/cjs/loader:900:24
+
+      2    1.8%  /usr/lib/system/libsystem_c.dylib
+      1   50.0%    JS: ~initializeCJS node:internal/modules/cjs/loader:313:23
+      1  100.0%      JS: ~initializeCJSLoader node:internal/process/pre_execution:558:29
+      1  100.0%        JS: ~setupUserModules node:internal/process/pre_execution:117:26
+      1  100.0%          JS: ~prepareExecution node:internal/process/pre_execution:55:26
+      1  100.0%            JS: ~prepareMainThreadExecution node:internal/process/pre_execution:39:36
+      1   50.0%    JS: ~initEventTarget node:internal/event_target:511:25
+      1  100.0%      JS: ~Performance node:internal/perf/performance:228:47
+      1  100.0%        JS: ~createPerformance node:internal/perf/performance:227:27
+      1  100.0%          JS: ~<anonymous> node:internal/perf/performance:1:1
+      1  100.0%            JS: ^compileForInternalLoader node:internal/bootstrap/loaders:318:27
+
+      2    1.8%  /usr/lib/libc++.1.dylib
+      1   50.0%    JS: ~value node:internal/console/constructor:336:20
+      1  100.0%      JS: ~log node:internal/console/constructor:375:6
+      1  100.0%        t std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, v8::internal::CompilationStatistics::OrderedStats> > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+      1  100.0%          JS: ~<anonymous> /Users/vladyslavpozdniakov/PhpstormProjects/prjctr-profiling/run.js:1:1
+      1  100.0%            JS: ~Module._compile node:internal/modules/cjs/loader:1229:37
+      1   50.0%    JS: ~assertEncoding node:internal/fs/utils:154:24
+      1  100.0%      JS: ~getOptions node:internal/fs/utils:317:20
+      1  100.0%        JS: ~readFileSync node:fs:450:22
+      1  100.0%          JS: ~Module._extensions..js node:internal/modules/cjs/loader:1284:37
+      1  100.0%            JS: ~Module.load node:internal/modules/cjs/loader:1121:33
+
