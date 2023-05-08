@@ -42,3 +42,4 @@ Delete time: 0.5617089979350567ms
 ```
 
 ![Result](./res.png)
+![0x Flamegraph](./0x-flamegraph.png)
